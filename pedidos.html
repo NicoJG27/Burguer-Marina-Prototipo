@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos y Reservas - Burger Marina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">BURGER MARINA</a>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="menu.html">Menú</a></li>
+                    <li><a href="pedidos.html">Reservas</a></li>
+                    <li><a href="comentarios.html">Contacto</a></li>
+                    <li><a href="pedidos.html" class="btn btn-primary-outline">Pedir Online</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <div class="container">
+                <h1 class="section-title">Haz tu Pedido o Reserva</h1>
+                <p class="section-subtitle">Rellena tus datos y prepararemos tu comida.</p>
+
+                <form class="contact-form" action="#" method="POST">
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>¿Qué deseas hacer?</label>
+                        <select name="servicio" required>
+                            <option value="recogida">Pedido para Recoger</option>
+                            <option value="domicilio">Pedido a Domicilio</option>
+                            <option value="reserva">Reserva de Mesa</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="detalles">Tu Pedido o Detalles de la Reserva</label>
+                        <textarea id="detalles" name="detalles" rows="6" placeholder="Ej: 2x Burger Marina (sin cebolla), 1x Papas Fritas. // O: Reserva para 4 personas a las 21:00h." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Confirmar Pedido / Reserva</button>
+
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Burger Marina. Todos los derechos reservados.</p>
+            <p>Proyecto de Nicolás Jiménez Gutiérrez y José Cortés Martín</p>
+        </div>
+    </footer>
+
+</body>
+</html>
