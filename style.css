@@ -1,6 +1,6 @@
-/* =========================================
+/* 
    1. VARIABLES Y ESTILOS GENERALES
-   ========================================= */
+*/
 :root {
     --color-primary: #E63946;
     --color-secondary: #F9A825;
@@ -22,13 +22,11 @@ body {
     background-color: var(--color-bg-light);
     line-height: 1.6;
     
-    /* --- NUEVO: TRUCO PARA EL FOOTER PEGADO --- */
-    min-height: 100vh;      /* Altura mínima: el 100% de la pantalla */
-    display: flex;          /* Convertimos el body en una caja flexible */
-    flex-direction: column; /* Elementos uno debajo de otro */
+    min-height: 100vh;    
+    display: flex;    
+    flex-direction: column;
 }
 
-/* --- NUEVO: Hace que el contenido principal crezca y empuje el footer --- */
 main {
     flex: 1;
 }
@@ -42,9 +40,9 @@ main {
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 
-/* =========================================
-   2. ENCABEZADO (NAVBAR)
-   ========================================= */
+/* 
+   2. NAVBAR
+*/
 .navbar {
     background: var(--color-text-light);
     padding: 1.2rem 0;
@@ -69,20 +67,18 @@ a { text-decoration: none; color: inherit; }
 .navbar-menu ul { display: flex; align-items: center; }
 .navbar-menu li { margin-left: 1.5rem; }
 
-/* Estilos para enlaces normales del menú */
 .navbar-menu a {
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
-/* Solo aplica el rojo al pasar el ratón si NO es el botón */
 .navbar-menu a:not(.btn):hover { 
     color: var(--color-primary); 
 }
 
-/* =========================================
+/* 
    3. BOTONES
-   ========================================= */
+*/
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -116,7 +112,6 @@ a { text-decoration: none; color: inherit; }
     color: var(--color-text-light);
 }
 
-/* --- CORREGIDO: Botón del menú (Pedir Online) --- */
 .btn-primary-outline {
     background-color: transparent;
     color: var(--color-primary);
@@ -124,16 +119,14 @@ a { text-decoration: none; color: inherit; }
     padding: 0.5rem 1rem;
 }
 
-/* Usamos !important aquí para asegurar que el texto se vuelva blanco
-   y no se pelee con el color rojo de los enlaces del menú */
 .btn-primary-outline:hover {
     background-color: var(--color-primary);
     color: #FFFFFF !important; 
 }
 
-/* =========================================
-   4. PORTADA (HERO)
-   ========================================= */
+/* 
+   4. PORTADA
+*/
 .hero {
     background-color: var(--color-secondary);
     padding: 6rem 0;
@@ -155,9 +148,9 @@ a { text-decoration: none; color: inherit; }
 
 .hero-actions .btn { margin: 0 0.5rem; }
 
-/* =========================================
-   5. PÁGINAS INTERNAS (Menú, Forms)
-   ========================================= */
+/*
+   5.Menú, Forms
+*/
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -173,7 +166,6 @@ a { text-decoration: none; color: inherit; }
     margin-bottom: 3rem;
 }
 
-/* Menu Grid */
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -223,7 +215,6 @@ a { text-decoration: none; color: inherit; }
     margin-bottom: 1rem;
 }
 
-/* Forms */
 .form-section { padding: 3rem 0; }
 
 .contact-form {
@@ -263,15 +254,14 @@ a { text-decoration: none; color: inherit; }
     outline: none;
 }
 
-/* =========================================
-   6. PIE DE PÁGINA (FOOTER) - CORREGIDO
-   ========================================= */
+/*
+   6. FOOTER
+*/
 .footer {
     text-align: center;
     padding: 2rem;
-    margin-top: auto; /* Ayuda a empujarlo si usamos flexbox */
+    margin-top: auto;
     
-    /* --- NUEVO: Color oscuro --- */
-    background-color: #222222; /* Gris muy oscuro, casi negro */
-    color: #eeeeee;            /* Texto blanco/gris claro */
+    background-color: #222222;
+    color: #eeeeee;          
 }
